@@ -1,0 +1,19 @@
+# Plantilla de configuracion para la instancia MongoDB del equipo.
+# Copiar a C:\Users\<usuario>\.mongo\mongod.cfg y ajustar rutas.
+# Puerto 27018 para no chocar con el MongoDB de Windows (27017).
+
+storage:
+  dbPath: C:\Users\<usuario>\.mongo\data
+
+systemLog:
+  destination: file
+  logAppend: true
+  path: C:\Users\<usuario>\.mongo\mongod.log
+
+net:
+  port: 27018
+  bindIp: 0.0.0.0
+
+# Tras crear los usuarios (ver GUIA-CONEXION-MONGODB.md), descomenta:
+#security:
+#  authorization: enabled
